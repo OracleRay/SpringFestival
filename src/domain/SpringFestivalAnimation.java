@@ -121,6 +121,7 @@ public class SpringFestivalAnimation extends VBox {
         getChildren().clear();
         getChildren().addAll(view);
 
+        // 移动
         TranslateTransition translateTransition = new TranslateTransition(Duration.millis(700), view);
         translateTransition.setFromX(0);
         translateTransition.setToX(1000);
@@ -136,6 +137,7 @@ public class SpringFestivalAnimation extends VBox {
     }
 
     public void duiLian(ImageView view) {
+        // 根据图片的实际高度设置图片的大小
         if (view.getImage().getHeight() < 500) {
             view.setFitHeight(70);
             view.setFitWidth(200);
